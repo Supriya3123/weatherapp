@@ -1,0 +1,166 @@
+*{
+     margin:0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: sans-serif;
+}
+body{
+    display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background :url("images/back.jpg");
+  background-size: cover;
+  background-position: center;
+  
+}
+.cointainer{
+    position: relative;
+    width: 400px;
+    height: 555px;
+    background-color: rgba(225,255,255,.2);
+    backdrop-filter: blur(30px);
+    border-radius: 16px;
+    padding: 20px;
+    color: #fff;
+}
+.searchbox{
+    position: relative;
+    width:100% ;
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+.searchbox i{
+    position: absolute;
+    left: 10px;
+    font-size:28px ;
+}
+.searchbox  input{
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ background-color: transparent;
+ border: 2px solid rgba(225,255,255,.2);
+ outline: none;
+ border-radius: 10px;
+ font-size: 22px;
+ color: #fff;
+ font-weight: 500;
+ text-transform: uppercase;
+ padding: 0 48px 0 42px;
+}
+.searchbox ::placeholder{
+    color: #fff;
+    text-transform: capitalize;
+
+}
+
+.searchbox button{
+    position: absolute;
+    right: 0;
+    width:40px;
+    height: 100%;
+    background: transparent;
+   border: none;
+   outline: none;
+   font-size: 28px;
+   color: #fff;
+   padding: 0 40px 0 5px;
+   cursor: pointer;
+}
+.weatherbox{
+    text-align: center;
+    margin: 40px 0;
+}
+
+
+.weatherbox img{
+    width: 60%;
+
+}
+.weatherbox .temperture{
+    position: relative;
+    font-size: 64px;
+    line-height: 1;
+    font-weight: 700; 
+    margin: 20px 0 6px -30px;
+}
+.weatherbox .temperture span{
+    position: absolute;
+    font-size: 24px;
+    margin-left: 4px; ;
+}
+.weatherbox .description{
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.weatherdetails{
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    display:  flex;
+}
+.weatherdetails .humidity,
+.weatherdetails .wind{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+.weatherdetails .humidity{
+    padding: 20px;
+    justify-content: flex-start;
+}
+.weatherdetails .wind{
+    padding: 20px;
+    justify-content: flex-end;
+}
+.weatherdetails i{
+ font-size:56px ;
+ margin-right: 10px;
+}
+.weatherdetails span{
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 500;
+}
+.weatherdetails p{
+    font-size: 14px;
+    font-weight: 500;
+}
+.notfound{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 240px;
+    
+}
+.weatherbox,
+.weatherdetails,
+.notfound
+{
+    visibility: hidden;
+}
+.weatherbox.active,
+.weatherdetails.active,
+.notfound.active
+{
+    visibility: visible;
+}
+.notfound img{
+    width: 65%;
+    max-width: 300px;
+    margin-top: 80px;
+   
+}
+.notfound p{
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 1px;
+    color: #fff;
+}
